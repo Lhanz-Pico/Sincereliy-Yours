@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sincereliy Yours</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" href="./design/wLogoNoBg.png" type="image/x-icon">
+</head>
+
+<body>
+
+<header>
+    <h1>Sincereliy Yours</h1>
+    <p>Handmade gifts that are made <span class="cute-text">sincereliy yours.</span></p>
+</header>
+
+<nav>
+    <div class="nav-logo">
+        <img src="./design/pfp.jpg" alt="Sincereliy Yours logo">
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+
+<section id="home">
+    <div class="container">
+        <div class="card">
+            <h2>Welcome!</h2>
+            <p>
+              At <strong>Sincereliy Yours</strong>, we create handmade fuzzy wire flowers
+              made with care, intention, and a touch of love—perfect for meaningful gifts
+              and special moments.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <div class="card">
+            <h2>About us</h2>
+            <p>
+               Every fuzzy wire flower is carefully crafted through commission,
+               allowing us to create personalized pieces that express your thoughts,
+              feelings, and stories—<em>sincereliy, yours</em>.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery">
+    <div class="container">
+        <div class="card">
+            <h2>Gallery</h2>
+            <p>
+               Photos of Sincereliy Yours creations will be displayed here.
+            </p>
+            
+            <div class="slider-wrapper">
+                <button class="arrow left" onclick="scrollGallery(-1)">&#10094;</button>
+
+                <div class="slider" id="slider">
+                    <img src="./flower pics/flower1.jpg" alt="Fuzzy Wire Flower" onclick="openImage(this)">  
+                    <img src="./flower pics/flower2.jpg" alt="Fuzzy Wire Flower" onclick="openImage(this)">
+                    <img src="./flower pics/flower3.jpg" alt="Fuzzy Wire Flower" onclick="openImage(this)">
+                    <img src="./flower pics/flower4.jpg" alt="Fuzzy Wire Flower" onclick="openImage(this)">
+                    <img src="./flower pics/flower5.jpg" alt="Fuzzy Wire Flower" onclick="openImage(this)">
+                    <img src="./flower pics/flower6.jpg" alt="Fuzzy Wire Flower" onclick="openImage(this)">
+                    <img src="./flower pics/flower7.jpg" alt="Fuzzy Wire Flower" onclick="openImage(this)">
+                    <img src="./flower pics/flower8.jpg" alt="Fuzzy Wire Flower" onclick="openImage(this)">
+                    <img src="./flower pics/flower9.jpg" alt="Fuzzy Wire Flower" onclick="openImage(this)">
+                    <img src="./flower pics/flower10.jpg" alt="Fuzzy Wire Flower" onclick="openImage(this)">
+                </div>
+
+                <button class="arrow right" onclick="scrollGallery(1)">&#10095;</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Image Zoom Overlay -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeImage()">&times;</span>
+    <span class="modal-arrow left" onclick="changeImage(-1)">&#10094;</span>
+<div class="modal-center">
+    <img class="modal-content" id="modalImage" alt="Enlarged flower image">
+</div>
+    <span class="modal-arrow right" onclick="changeImage(1)">&#10095;</span>
+</div>
+
+<section id="contact">
+    <div class="container">
+        <div class="card">
+            <h2>Order Form</h2>
+
+            <form id="orderForm">
+
+                <input type="text" id="name" placeholder="Name" required>
+
+                <input type="text" id="order" placeholder="Order (e.g. bouquet, single flower, customized)" required>
+
+                <input type="tel" id="contactNumber" placeholder="Contact Number" required> 
+
+                <textarea id="address" placeholder="Complete Address" required></textarea>
+
+                <input type="text" id="color" placeholder="Color" required>
+
+                <input type="text" id="addons" placeholder="Add-on/s (optional)">
+
+                <select id="delivery" required>
+                    <option value="">Mode of Delivery</option>
+                    <option value="Pick Up">Pick Up</option>
+                    <option value="Shipment (Lalamove / J&T)">Shipment (Lalamove / J&T)</option>
+                    <option value="Meet Up">Meet Up</option>
+                </select>
+
+                <label class="checkbox">
+                    <input type="checkbox" id="confirm" required>
+                    I have read and agree to the terms and conditions below.
+                </label>
+
+                <button type="submit">Copy Order Details</button>
+            </form>
+
+            <hr>
+
+            <h3>Payment Details</h3>
+            <ul>
+                <li>A minimum of 50% down payment is required before order processing.</li>
+                <li>The down payment is non-refundable.</li>
+                <li>Payment is accepted via <strong>GCash only</strong></li>
+            </ul> 
+
+            <h3>Delivery Information</h3>
+            <p><strong>Pick Up:</strong> Miguel Cristi St. GB 1, San Mateo, Rizal</p>
+            <p><strong>Shipment:</strong> Lalamove / J&T (shipping fee shouldered by buyer)</p>
+            <p><strong>Meet Up:</strong> San Mateo areas only</p>
+
+            <h3>Terms and Conditions</h3>
+            <ul>
+                <li>All items are made-to-order.</li>
+                <li>Processing time may take 2 days up to 2 weeks, depending on the design and order volume.</li>
+                <li>Customized orders are accepted. Kindly send your preferred design for reference.</li>
+                <li>Prices may vary depending on size, design, and add-ons.</li>
+                <li>No cancellations once the order is confirmed.</li>
+                <li>No changes in design after order confirmation.</li>
+                <li>Rush orders are accepted with an additional fee.</li>
+                <li>The seller reserves the right to decline suspicious or bogus orders.</li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+
+    <script src="script.js"></script>
+
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <h3>Sincereliy Yours</h3>
+            <p>Handmade gifts that are made <span class="cute-text">sincereliy yours.</span></p>
+        </div>
+
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <a href="https://www.facebook.com/share/1BZrQmXEQS/?mibextid=wwXIfr" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/sincereliy.yours?igsh=c2JjbjQ4eXoxbGN3" target="_blank">Instagram</a>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+          <p>© 2026 Sincereliy Yours. All rights reserved.</p>
+          <p class="footer-credit">Created by Lhanz Andrei D. Pico · BSIT 1-1 · PUPQC</p>
+    </div>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
