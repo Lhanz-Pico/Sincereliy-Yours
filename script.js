@@ -33,7 +33,7 @@ function scrollGallery(direction) {
     const image = slider.querySelector("img");
     if (!image) return;
 
-    const gap = 15; // same as CSS gap
+    const gap = 15;
     const scrollAmount = image.offsetWidth + gap;
 
     slider.scrollLeft += direction * scrollAmount;
@@ -82,4 +82,5 @@ document.querySelectorAll("nav a").forEach(link => {
         target.scrollIntoView({ behavior: "smooth" });
     });
 });
+
 
