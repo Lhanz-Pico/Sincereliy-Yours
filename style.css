@@ -65,8 +65,19 @@ nav {
     border-radius: 50%;
     object-fit: cover;
 
+    cursor: pointer;
+    transition: transform 0.6s ease;
+
     margin-right: 20px;  /* tighter */
     margin-left: 5px;  /* looser */
+}
+
+.nav-logo img:hover {
+    transform: rotate(360deg);
+}
+
+.nav-logo img:active {
+    transform: scale(0.9);
 }
 /* Navigation links */
 .nav-links {
@@ -91,7 +102,7 @@ nav {
     display: flex;
     align-items: center;
 }
-/* Hover */
+
 .nav-links a:hover {
     color: #d6336c;
 }
@@ -395,4 +406,5 @@ ul {
     .site-footer p {
         max-width: 100%;
     }
+
 }
